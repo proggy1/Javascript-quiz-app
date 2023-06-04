@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --theme-clr: #0064f2;
+}
+
+body {
+  background-color: var(--theme-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+#custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(4, 90%, 65%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  z-index: 9999;
+  display: none;
+}
+
+/* Button Section Start */
+.start-button-section {
+  display: none;
+}
+.start-button-section.active {
+  display: block;
+}
+.start-button-section button {
+  font-size: 2rem;
+  padding: 0.3rem 1.5rem;
+  cursor: pointer;
+  border: 5px solid hsl(0, 0%, 10%);
+  border-radius: 10px;
+  transition: 0.25s;
+}
+.start-button-section button .start-button-section button:hover {
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+}
+/* Button Section End */
+/* Question Box Start */
+.quiz-section {
+  display: none;
+  scale: 1.2;
+}
+.quiz-section.active {
+  display: block;
+}
+.quiz-section .question-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  min-width: 300px;
+  width: calc(10vw + 400px);
+  display: none;
+}
+.quiz-section .question-box.active {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .quiz-section {
+    scale: 0.9;
+  }
+  .quiz-section .question-box {
+    flex-grow: 1;
+    width: 100vw;
+  }
+}
+
+.quiz-section .question-box header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+.quiz-section .question-box header .question-number {
+  color: hsl(0, 0%, 30%);
+}
+.quiz-section .question-box header .time {
+  background-color: hsla(215, 100%, 70%, 0.25);
+  padding: 0.3rem 1.3rem;
+  border-radius: 50px;
+}
+.quiz-section .question-box header .time > i {
+  color: var(--theme-clr);
+}
+.quiz-section .question-box header .time span {
+  margin-left: 20px;
+}
+
+.quiz-section .question-box .question {
+  font-weight: bold;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.quiz-section .question-box .choices-container {
+  margin-bottom: 30px;
+}
+.quiz-section .question-box .choices-container .choice {
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: box-shadow 0.25s;
+  box-shadow: -5px 5px 5px #ddd;
+  position: relative;
+
+  user-select: none;
+}
+.quiz-section .question-box .choices-container .choice:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.quiz-section .question-box .choices-container .choice:hover {
+  box-shadow: -5px 5px 10px hsl(0, 0%, 70%);
+}
+.quiz-section .question-box .choices-container .choice.chosen {
+  border: 1px solid hsl(0, 0%, 30%);
+}
+.quiz-section .question-box .choices-container .choice.right-answer {
+  background-color: hsla(130, 98%, 50%, 0.35);
+}
+.quiz-section .question-box .choices-container .choice.wrong-answer {
+  background-color: hsla(0, 100%, 50%, 0.35);
+}
+
+.quiz-section .question-box .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quiz-section .question-box .buttons .next-button,
+.quiz-section .question-box .buttons .submit-button {
+  background-color: var(--theme-clr);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* Question Box End */
+/* Restart Button Section Start */
+.restart-button-section {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restart-button-section.active {
+  display: flex;
+}
+
+.restart-button-section > div {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .restart-button-section > div {
+    font-size: 1.4rem;
+  }
+}
+
+.restart-button-section > button {
+  font-size: 2rem;
+  padding: 0.3rem 1.5rem;
+  cursor: pointer;
+  border: 5px solid hsl(0, 0%, 10%);
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.restart-button-section > button:hover {
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+}
+/* Restart Button Section End */

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Quizz App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="custom-alert"></div>
+    <section class="active start-button-section">
+      <button>Start</button>
+    </section>
+    <section class="quiz-section">
+      <div class="question-box active">
+        <header>
+          <div class="question-number"></div>
+          <div class="time">
+            <i class="fa-solid fa-stopwatch"></i> <span>30</span>
+          </div>
+        </header>
+        <div class="question">Which Continent Is The Biggest</div>
+        <div class="choices-container">
+          <div class="choice">North America</div>
+          <div class="choice">Africa</div>
+          <div class="choice" id="right-answer">Asia</div>
+          <div class="choice">Europe</div>
+        </div>
+        <div class="buttons">
+          <button class="submit-button">Submit</button>
+          <button class="next-button">Next</button>
+        </div>
+      </div>
+      <div class="question-box">
+        <header>
+          <div class="question-number">1 Of 3 Question</div>
+          <div class="time">
+            <i class="fa-solid fa-stopwatch"></i> <span>10</span>
+          </div>
+        </header>
+        <div class="question">whas is &lt;div&gt; short for</div>
+        <div class="choices-container">
+          <div class="choice" id="right-answer">Division</div>
+          <div class="choice">Divorce</div>
+          <div class="choice">Divide</div>
+          <div class="choice">Divisor</div>
+        </div>
+        <div class="buttons">
+          <button class="submit-button">Submit</button>
+          <button class="next-button">Next</button>
+        </div>
+      </div>
+    </section>
+    <section class="restart-button-section">
+      <div>You Scored 1 Out Of 3</div>
+      <button>Restart</button>
+    </section>
+  </body>
+</html>
